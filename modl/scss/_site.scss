@@ -1,0 +1,208 @@
+/**
+* General
+**/
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @include fontRegular;
+  font-size: rem-calc(18);
+  line-height: rem-calc(28);
+  color: $darkgray;
+}
+
+p {
+  margin-bottom: rem-calc(38);
+}
+
+a {
+  color: $darkgray;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $darkblue;
+  }
+}
+
+strong {
+  @include fontBold();
+}
+
+em {
+  @include fontItalic();
+}
+
+h1, h2 {
+  @include fontHeaderRegular();
+  text-transform: uppercase;
+  color: $darkgray;
+}
+
+h3, h4, h5, h6 {
+  @include fontBold();
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: rem-calc(72);
+  line-height: rem-calc(72);
+  margin-bottom: rem-calc(26);
+  color: $blue;
+}
+
+h3 {
+  font-size: rem-calc(20);
+  line-height: rem-calc(30);
+  margin-bottom: rem-calc(16);
+  color: $blue;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@include breakpoint(small only) {
+  .columns {
+    padding: rem-calc(0 20);
+  }
+}
+
+/**
+* Sections General
+**/
+
+section.dark {
+  background-color: $darkgray;
+  color: $white;
+  a {
+    color: inherit;
+  }
+}
+
+.sidebar {
+  max-width: rem-calc(265);
+  &.quote {
+    @include fontHeaderRegular;
+    color: $blue;
+    font-size: rem-calc(32);
+    line-height: rem-calc(38);
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: rem-calc(17);
+  }
+  @include breakpoint(small only) {
+    max-width: 100%;
+  }
+}
+
+section {
+  padding: rem-calc(80 0);
+}
+
+/**
+* Buttons
+**/
+
+a.button {
+  border: $blue 2px solid;
+  border-radius: rem-calc(16);
+  color: $blue;
+  cursor: pointer;
+  &.large {
+    padding: rem-calc(5 40);
+  }
+  &.small {
+    border: 1px solid;
+    padding: rem-calc(3 12);
+    font-size: rem-calc(14);
+    line-height: rem-calc(14);
+    margin-left: rem-calc(5);
+  }
+  &.white {
+    border-color: $white;
+    color: $white;
+  }
+  &:hover {
+    background-color: $lightblue;
+  }
+}
+
+/**
+* Form
+**/
+
+input[type='email'] {
+  background: none;
+  border: $blue 2px solid;
+  color: $white;
+  box-shadow: none;
+  padding: rem-calc(0 17);
+  height: rem-calc(35);
+  border-radius: rem-calc(16 0 0 16) !important;
+  &:focus {
+    background: none;
+  }
+}
+.input-group-button {
+  text-align: left;
+}
+input.button {
+  background-color: $blue;
+  border: $blue 2px solid;
+  border-radius: rem-calc(0 16 16 0) !important;
+  height: rem-calc(35);
+  color: $white;
+  @include fontBold;
+  font-size: rem-calc(16);
+  padding-left: rem-calc(15);
+  padding-right: rem-calc(15);
+}
+
+/**
+* Overlay
+**/
+
+.reveal {
+  padding: rem-calc(20);
+}
+
+/**
+* Footer
+**/
+
+footer {
+  background-color: $blue;
+  .footerBlock {
+    margin: 0 auto;
+    max-width: rem-calc(619);
+    padding: rem-calc(60 0 105 0);
+    img.tpadMapLogo {
+      width: rem-calc(619);
+    }
+    a.button {
+      display: block;
+      margin-top: rem-calc(35);
+      background-color: #67C3EC;
+      color: $white;
+      @include fontBold;
+      font-size: rem-calc(38);
+      line-height: rem-calc(38);
+      width: 100%;
+      text-align: center;
+      padding: rem-calc(12);
+      border-radius: rem-calc(8);
+    }
+
+    p.copyright {
+      text-align: center;
+      color: $white;
+      margin-top: rem-calc(69);
+      font-size: rem-calc(14);
+      line-height: rem-calc(17);
+    }
+  }
+}

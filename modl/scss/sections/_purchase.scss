@@ -1,0 +1,101 @@
+section.purchase {
+  .sidebar {
+    h3 {
+      @include fontHeaderRegular;
+      font-size: rem-calc(32);
+      line-height: rem-calc(32);
+      margin-bottom: rem-calc(11);
+    }
+    @include fontBold;
+    font-size: rem-calc(20);
+    line-height: rem-calc(30);
+    .events {
+      background-color: $lightblue;
+      padding: rem-calc(20 18);
+      margin-bottom: rem-calc(47);
+      ul {
+        margin-left: rem-calc(18);
+        list-style: disc;
+        li {
+          line-height: rem-calc(26);
+          margin-bottom: rem-calc(7);
+          @include breakpoint(small) {
+            br {
+              //display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.productHeader {
+    position: relative;
+    height: rem-calc(85);
+    max-width: rem-calc(276);
+    padding: rem-calc(3 53 0 53);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: rem-calc(20);
+    @include breakpoint(medium only) {
+      padding: rem-calc(3 30 0 30);
+    }
+    &.rental {
+      background-image: url(../img/rental.jpg);
+    }
+    &.package {
+      background-image: url(../img/package.jpg);
+    }
+    &.school {
+      background-image: url(../img/school.jpg);
+    }
+    &.corporate {
+      background-image: url(../img/corporate.jpg);
+    }
+  }
+
+  h3.product {
+    @include vertical-align;
+    @include fontBold;
+    font-size: rem-calc(22);
+    line-height: rem-calc(25);
+    color: $white;
+    text-align: center;
+    &.corporate {
+      font-size: rem-calc(16);
+      line-height: rem-calc(19);
+    }
+    @include breakpoint(medium only) {
+      font-size: rem-calc(16);
+      line-height: rem-calc(19);
+    }
+  }
+
+  div.productInfo {
+    @include fontBold;
+    padding: rem-calc(0 29);
+    max-width: rem-calc(276);
+    a {
+      color: $blue;
+      &:hover {
+        color: $darkblue;
+      }
+    }
+    ul {
+      list-style: disc;
+      margin-left: rem-calc(18);
+      margin-bottom: rem-calc(18);
+      li {
+        @include fontRegular;
+        font-size: rem-calc(17);
+        line-height: rem-calc(20);
+        margin-bottom: rem-calc(5);
+      }
+    }
+    &.corporate {
+      @include fontRegular;
+      font-size: rem-calc(17);
+      line-height: rem-calc(20);
+    }
+  }
+}

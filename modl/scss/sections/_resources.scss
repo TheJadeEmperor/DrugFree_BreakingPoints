@@ -1,0 +1,50 @@
+section.resources {
+  .sidebar {
+    @include fontBold;
+    font-size: rem-calc(20);
+    line-height: rem-calc(25);
+    h3 {
+      @include fontHeaderRegular;
+      font-size: rem-calc(32);
+      line-height: rem-calc(32);
+      margin-bottom: rem-calc(11);
+    }
+    form {
+      margin-top: rem-calc(25);
+      input[type='email'] {
+        color: $darkblue;
+      }
+    }
+    @include breakpoint(small only) {
+      margin-top: rem-calc(47);
+    }
+  }
+
+  h3{
+    @include fontBold;
+    /*color: $darkgray;*/
+    margin-top: rem-calc(15);
+    &:nth-of-type(1) {
+      margin-top: 0;
+    }
+  }
+
+  .blocks {
+    p {
+      margin-top: rem-calc(14);
+      max-width: rem-calc(200);
+      font-size: rem-calc(15);
+      line-height: rem-calc(19);
+      margin-bottom: rem-calc(25);
+    }
+    a {
+      font-size: rem-calc(15);
+      line-height: rem-calc(19);
+      color: $blue;
+      &:hover {
+        color: $darkblue;
+      }
+    }
+  }
+
+}

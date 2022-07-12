@@ -1,0 +1,16 @@
+section.metric {
+  background-image: url(../img/metric.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  h2 {
+    font-size: rem-calc(38);
+    line-height: rem-calc(52);
+    text-align: center;
+    padding: rem-calc(190 0);
+    @include breakpoint(small only) {
+      padding-top: rem-calc(95);
+      padding-bottom: rem-calc(116);
+    }
+  }
+}

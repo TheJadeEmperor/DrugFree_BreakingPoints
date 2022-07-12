@@ -1,0 +1,45 @@
+section.connect {
+  background-image: url(../img/connect.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+
+  .sidebar {
+    h3 {
+      color: $white;
+      @include fontHeaderRegular;
+      font-size: rem-calc(32);
+      line-height: rem-calc(32);
+      margin-bottom: rem-calc(11);
+    }
+    .fa {
+      color: $blue;
+    }
+
+    hr {
+      margin: 32px auto;
+      border: 0;
+      height: 1px;
+      background: rgba(151, 151, 151, .39);
+    }
+
+    form {
+      margin-top: rem-calc(25);
+    }
+
+    @include breakpoint(small only) {
+      margin-top: rem-calc(47);
+    }
+  }
+
+  h3.testimonial {
+    @include fontHeaderRegular();
+    font-size: rem-calc(32);
+    line-height: rem-calc(40);
+    max-width: rem-calc(720);
+    span {
+      display: block;
+      margin-top: rem-calc(10);
+    }
+  }
+}

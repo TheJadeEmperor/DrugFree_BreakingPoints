@@ -1,0 +1,24 @@
+section.about {
+  ul.experts {
+    li {
+      font-size: rem-calc(15);
+      line-height: rem-calc(20);
+      margin-bottom: rem-calc(24);
+      a {
+        color: $gray;
+        margin-left: rem-calc(5);
+        .fa {
+          display: inline;
+        }
+      }
+    }
+  }
+  @include breakpoint(small only) {
+    .sidebar {
+      margin-top: rem-calc(40);
+    }
+    ul.experts {
+      margin-left: rem-calc(-10);
+    }
+  }
+}

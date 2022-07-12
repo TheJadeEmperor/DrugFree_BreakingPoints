@@ -1,0 +1,194 @@
+section.masthead {
+  background-image: url(../img/bgtile_2x.jpg);
+  background-repeat: repeat-x;
+  background-size: 38px auto;
+  padding: 0;
+
+  header {
+    position: fixed;
+    top: 0;
+    background-color: $header;
+    transition: background-color 0.3s;
+    width: 100%;
+    height: rem-calc(85);
+    z-index: 1000;
+    -webkit-transition: height 0.3s;
+    -moz-transition: height 0.3s;
+    -ms-transition: height 0.3s;
+    -o-transition: height 0.3s;
+    transition: height 0.3s;
+    a.backLink {
+      display: block;
+      font-size: rem-calc(12);
+      margin-left: rem-calc(25);
+      margin-bottom: 0;
+      color: $darkblue;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    img.logo {
+        max-width: rem-calc(163);
+        margin: rem-calc(0 25 9 25);
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    @include breakpoint(small only) {
+      height: rem-calc(51);
+      img.logo {
+        max-width: auto;
+        margin-top: rem-calc(9);
+        margin-left: 0;
+        max-height: rem-calc(35);
+      }
+      a.backLink {
+        display: none;
+      }
+    }
+    @include breakpoint(medium down) {
+        background-color: $headerSM;
+    }
+  }
+
+  /**
+  * Nav
+  **/
+
+  nav {
+    height: rem-calc(85);
+    position: relative;
+    ul {
+      float: left;
+      @include vertical-align(relative);
+      li {
+        display: inline-block;
+        a {
+          @include fontBold;
+          font-size: rem-calc(14);
+          line-height: rem-calc(14);
+          text-transform: uppercase;
+          color: #6C98AB;
+          &.active {
+            color: $darkblue;
+          }
+        }
+      }
+      li + li {
+        margin-left: rem-calc(25);
+      }
+      &.social {
+        float: right;
+        a {
+          font-size: rem-calc(21);
+          line-height: rem-calc(21);
+        }
+        @include breakpoint(medium down) {
+          display: none;
+        }
+      }
+    }
+    .responsiveNav {
+      display: none;
+      font-size: rem-calc(24);
+      line-height: rem-calc(24);
+    }
+    @include breakpoint(small only) {
+      height: rem-calc(51);
+      ul {
+        display: none;
+      }
+      .responsiveNav {
+        @include vertical-align(relative);
+        @include fontBold;
+        color: #3AA2D0;
+        float: right;
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+
+  // On scroll nav shrinks by applying the .smaller class to header
+  header.smaller {
+    background-color: $lightblueHeader;
+    /*
+    height: rem-calc(40);
+    img.logo {
+      max-width: auto;
+      max-height: rem-calc(25);
+    }
+    nav {
+      height: rem-calc(35);
+    }
+    */
+  }
+
+  // Responsive nav for small
+  ul.responsive {
+    display: none;
+
+    @include breakpoint(small only) {
+      position: absolute;
+      top: rem-calc(51);
+      width: 100%;
+      background-color: #3AA2D0;
+      padding: rem-calc(25 47);
+      li {
+        a {
+          @include fontBold;
+          text-transform: uppercase;
+          color: $white;
+          font-size: rem-calc(14);
+          line-height: rem-calc(14)
+        }
+      }
+      li + li {
+        margin-top: rem-calc(14);
+      }
+    }
+  }
+
+  /**
+  * Other Elements
+  **/
+  img.pencil {
+    width: rem-calc(380);
+  }
+
+  .trailer {
+    margin-top: rem-calc(134);
+    margin-bottom: rem-calc(32);
+  }
+
+  .youtube-container {
+    display: block;
+    margin-top: rem-calc(134);
+    width: 100%;
+    max-width: rem-calc(770);
+
+    @include breakpoint(small only) {
+        margin-top: rem-calc(80);
+    }
+  }
+  .youtube-player {
+    display: block;
+    width: 100%; /* assuming that the video has a 16:9 ratio */
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: hand;
+    cursor: pointer;
+  }
+
+  .right {
+
+  }
+
+}
